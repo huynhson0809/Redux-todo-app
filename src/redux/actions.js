@@ -26,7 +26,7 @@ export const setPriority = (prioriry) => {
   };
 };
 
-export const toggleCheckedTodo = (id) => {
+export const setCheckedTodo = (id) => {
   return {
     type: "todoList/setCheckedTodo",
     payload: id,

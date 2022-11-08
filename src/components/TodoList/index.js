@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addTodo } from "../../redux/actions";
 import Todo from "../Todo";
 import { todosRemaining } from "../../redux/selectors";
+import todosSlice from "../Todo/todosSlice";
 
 export default function TodoList() {
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ export default function TodoList() {
   const handleAddButtonClick = () => {
     const randomId = Math.floor(Math.random() * 101);
     dispatch(
-      addTodo({
+      todosSlice.actions.addTodo({
         id: randomId,
         name: name,
         completed: false,
